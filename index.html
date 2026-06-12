@@ -6,8 +6,15 @@
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ponto de Ruptura · Aula ao vivo com Thays Moya">
+<meta property="og:description" content="Descubra como desbloquear o que trava o seu crescimento. Sábado, 4 de julho, 9h, ao vivo no Zoom.">
+<meta property="og:image" content="https://thaysmoya.github.io/ponto-de-ruptura/og-image.jpg">
+<meta property="og:url" content="https://thaysmoya.github.io/ponto-de-ruptura/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Ponto de Ruptura — Aula ao vivo com Thays Moya · 04/07</title>
-<meta name="description" content="Descubra o que está travando o seu crescimento — e destrave preço, decisão e controle. Aula ao vivo, sábado 04/07, 9h.">
+<meta name="description" content="Descubra o que está travando o seu crescimento e destrave preço, decisão e controle. Aula ao vivo, sábado 04/07, 9h.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -33,18 +40,19 @@ body{
   -webkit-font-smoothing:antialiased;
   font-variant-numeric:oldstyle-nums;
 }
-img{display:block;max-width:100%}
+img,picture{display:block;max-width:100%}
+picture img{width:100%}
 a[href^="tel"]{color:inherit;text-decoration:none;pointer-events:none}
 
 .grid{max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(12,1fr);gap:0 32px}
-section{padding:128px 0}
-@media(max-width:860px){section{padding:80px 0}.grid{padding:0 24px;gap:0 16px}}
+section{padding:88px 0}
+@media(max-width:860px){section{padding:56px 0}.grid{padding:0 24px;gap:0 16px}}
 
 /* ===== TIPOGRAFIA ===== */
 .eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);font-weight:500}
 .folio{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--terra);font-variant-numeric:oldstyle-nums}
 h1,h2,h3,.display{font-family:'Fraunces',serif;font-optical-sizing:auto;color:var(--ink)}
-h1{font-weight:300;font-size:clamp(3rem,7.4vw,6rem);line-height:1.04;letter-spacing:-.02em}
+h1{font-weight:300;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.02em}
 h2{font-weight:300;font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:28px}
 h1 em,h2 em{font-style:italic;font-weight:400}
 p{margin-bottom:18px;max-width:65ch}
@@ -71,14 +79,14 @@ p strong{color:var(--ink);font-weight:500}
 main{display:block}
 
 /* ===== HERO — assimétrico 12 col ===== */
-.hero{padding:150px 0 120px;margin-top:40px}
+.hero{padding:76px 0 64px;margin-top:40px}
 .hero-copy{grid-column:1/8;align-self:center}
 .hero-fig{grid-column:8/13;align-self:center}
 .hero-copy .eyebrow{display:block;margin-bottom:34px}
 .hero-copy h1{margin-bottom:34px}
 .rotor{display:inline-block;font-style:italic;font-weight:400;color:var(--terra);min-width:5.2ch;transition:opacity .35s ease}
 .rotor.fade{opacity:0}
-.dataline{display:flex;margin:40px 0 0;border-top:1px solid var(--hair);padding-top:26px}
+.dataline{display:flex;margin:24px 0 0;border-top:1px solid var(--hair);padding-top:26px}
 .dataline>div{padding-right:38px;margin-right:38px;border-right:1px solid var(--hair)}
 .dataline>div:last-child{border-right:none}
 .dl1{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gray-l)}
@@ -87,9 +95,9 @@ main{display:block}
 figcaption{margin-top:14px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-l);display:flex;align-items:center;gap:12px}
 figcaption::before{content:"";width:28px;height:1px;background:var(--terra)}
 @media(max-width:860px){
-  .hero{padding:96px 0 80px}
+  .hero{padding:64px 0 56px}
   .hero-copy{grid-column:1/-1}
-  .hero-fig{grid-column:1/-1;order:-1;margin-bottom:48px;max-width:420px}
+  .hero-fig{grid-column:1/-1;margin-top:48px;max-width:420px}
   .dataline>div{padding-right:22px;margin-right:22px}
 }
 
@@ -226,18 +234,17 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
     <div class="hero-copy">
       <span class="eyebrow">Aula ao vivo · com Thays Moya</span>
       <h1>Para a mulher que lidera e está <span class="rotor" id="rotor">no limite.</span><br>Descubra como desbloquear o que trava o seu crescimento.</h1>
-      <p class="lead">Você é a mais preparada da sala.<br>Trabalha mais que todo mundo.<br>E mesmo assim o próximo nível não chega.</p>
-      <p class="lead"><strong>Não é o mercado. Não é a sua competência.<br>É um padrão — e ele tem nome, origem e saída.</strong></p>
+      <p class="lead">Você é a mais preparada da sala. E mesmo assim o próximo nível não chega. <strong>Não é o mercado. É um padrão, e ele tem saída.</strong></p>
       <div class="dataline">
         <div><div class="dl1">Data</div><div class="dl2">Sáb, 4 jul</div></div>
         <div><div class="dl1">Horário</div><div class="dl2">9h <span style="font-size:.85rem;color:var(--gray-l)">Brasília</span></div></div>
         <div><div class="dl1">Onde</div><div class="dl2">Zoom</div></div>
       </div>
-      <a class="btn" href="#oferta" style="margin-top:42px"><span>Quero desbloquear agora</span></a>
+      <a class="btn" href="#oferta" style="margin-top:26px"><span>Ver como participar</span></a>
       <div class="micro">Pagamento seguro</div>
     </div>
     <figure class="hero-fig">
-      <img src="thays-hero.jpg" alt="Thays Moya" fetchpriority="high">
+      <picture><source srcset="thays-hero.webp" type="image/webp"><img src="thays-hero.jpg" alt="Thays Moya" fetchpriority="high"></picture>
       <figcaption>Thays Moya · Psicóloga · CRP 14/06866-3</figcaption>
     </figure>
   </div>
@@ -250,16 +257,13 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
   <div class="grid">
     <div class="narrow rv">
       <h2>Reconhece alguma <em>dessas cenas?</em></h2>
-      <div class="cena"><i>—</i><span>Mandou a proposta com valor menor do que tinha calculado — de novo</span></div>
-      <div class="cena"><i>—</i><span>Refez uma entrega que já estava pronta, porque "não estava no seu padrão"</span></div>
-      <div class="cena"><i>—</i><span>Tem uma decisão parada há semanas esperando uma certeza que não chega</span></div>
-      <div class="cena"><i>—</i><span>A equipe espera sua aprovação pra tudo — e você não consegue soltar</span></div>
-      <div class="cena"><i>—</i><span>Fechou o melhor mês do ano achando que foi sorte</span></div>
-      <p>Cada uma dessas cenas tem um preço.</p>
-      <p>O valor que você não cobrou. A hora mais cara da empresa gasta refazendo o pronto. A oportunidade que passou enquanto você "analisava".</p>
-      <p><strong>Some isso ao longo de um ano e você encontra a diferença entre o negócio que você tem e o que já deveria ter.</strong></p>
-      <p>E o pior: de fora, tudo isso parece virtude.</p>
-      <p>Cuidado. Rigor. Responsabilidade. Por isso ninguém te alerta — e o padrão segue cobrando, mês após mês, há anos.</p>
+      <div class="cena"><i>·</i><span>Mandou a proposta com valor menor do que tinha calculado. De novo.</span></div>
+      <div class="cena"><i>·</i><span>Refez uma entrega que já estava pronta, porque "não estava no seu padrão"</span></div>
+      <div class="cena"><i>·</i><span>Tem uma decisão parada há semanas esperando uma certeza que não chega</span></div>
+      <div class="cena"><i>·</i><span>A equipe espera sua aprovação pra tudo. E você não consegue soltar.</span></div>
+      <div class="cena"><i>·</i><span>Fechou o melhor mês do ano achando que foi sorte</span></div>
+      <p>Cada cena dessas tem um preço: o valor que você não cobrou, a hora refazendo o pronto, a oportunidade que passou. <strong>Some um ano disso e você encontra a diferença entre o negócio que tem e o que já deveria ter.</strong></p>
+      <p>E o pior: de fora, parece virtude. Por isso ninguém te alerta.</p>
     </div>
   </div>
 </section>
@@ -269,7 +273,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
   <div class="grid">
     <div class="pontos-head rv">
       <h2>Os mesmos três pontos. <em>Sempre.</em></h2>
-      <p>Em dez anos atendendo mulheres em posição de liderança, eu vi essa trava se repetir em histórias completamente diferentes — e agindo sempre nos mesmos três pontos:</p>
+      <p>Em dez anos atendendo mulheres em posição de liderança, eu vi essa trava se repetir em histórias completamente diferentes. E agindo sempre nos mesmos três pontos:</p>
     </div>
     <div class="pontos-list rv">
       <div class="ponto">
@@ -287,9 +291,8 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <h3>A decisão</h3>
         <p>Não falta dado; falta uma garantia de não errar que não existe.</p>
       </div>
-      <p style="margin-top:40px">Esses três pontos têm <strong>a mesma raiz</strong>. Ela se formou muito antes da sua carreira começar — e enquanto você não souber onde, vai continuar tratando sintoma.</p>
-      <p>No sábado, eu abro essa raiz ao vivo. E te mostro qual dos três pontos é o <strong>seu</strong> dominante — ou se você opera nos três.</p>
-      <a class="btn" href="#oferta"><span>Quero desbloquear o meu ponto</span></a>
+      <p style="margin-top:34px">Esses três pontos têm <strong>a mesma raiz</strong>. No sábado eu abro ela ao vivo: você sai sabendo qual ponto é o <strong>seu</strong> dominante, ou se opera nos três.</p>
+      <a class="btn" href="#oferta"><span>Quero descobrir o meu ponto</span></a>
     </div>
   </div>
 </section>
@@ -301,9 +304,9 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
       <h2>Saindo da aula, <em>você vai ter:</em></h2>
     </div>
     <div class="levas rv">
-      <div class="leva"><div class="folio">1</div><strong>O seu diagnóstico</strong><p>qual dos três pontos domina no seu caso — preço, controle ou decisão</p></div>
+      <div class="leva"><div class="folio">1</div><strong>O seu diagnóstico</strong><p>qual dos três pontos domina no seu caso: preço, controle ou decisão</p></div>
       <div class="leva"><div class="folio">2</div><strong>O mapa da raiz</strong><p>de onde esse padrão veio e por que ele escolheu logo as mais competentes</p></div>
-      <div class="leva"><div class="folio">3</div><strong>O primeiro movimento</strong><p>o passo concreto pra aplicar já na segunda-feira — na próxima proposta, entrega e decisão</p></div>
+      <div class="leva"><div class="folio">3</div><strong>O primeiro movimento</strong><p>o passo concreto pra aplicar já na segunda-feira: na próxima proposta, entrega e decisão</p></div>
     </div>
     <div class="quando rv">
       <div class="q1">Sábado, 4 de julho, às 9h (Brasília)</div>
@@ -316,12 +319,12 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <section>
   <div class="grid">
     <figure class="bio-fig rv">
-      <img src="thays-bio.jpg" alt="Thays Moya, psicóloga" loading="lazy">
+      <picture><source srcset="thays-bio.webp" type="image/webp"><img src="thays-bio.jpg" alt="Thays Moya, psicóloga" loading="lazy"></picture>
       <figcaption>Criadora do Método Inteira</figcaption>
     </figure>
     <div class="bio-copy rv">
       <h2>Conheça a <em>mentora</em></h2>
-      <p><strong>Psicóloga (CRP 14/06866-3)</strong>, trabalha há mais de dez anos com mulheres que carregam muito — empresárias, líderes, profissionais que sustentam operações, equipes e famílias ao mesmo tempo.</p>
+      <p><strong>Psicóloga (CRP 14/06866-3)</strong>, trabalha há mais de dez anos com mulheres que carregam muito: empresárias, líderes, profissionais que sustentam operações, equipes e famílias ao mesmo tempo.</p>
       <p>Criadora do <strong>Método Inteira</strong>, mentoria para mulheres que querem alcançar muito mais sem pagar o preço errado: pra ela, crescimento profissional não pode custar a vida pessoal, a família e a saúde de quem cresce. Estar no topo e estar inteira não são escolhas opostas.</p>
     </div>
   </div>
@@ -331,8 +334,9 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <section id="oferta" class="s-sand">
   <div class="grid">
     <div class="oferta-head rv">
+      <h2 style="text-align:center;margin-bottom:34px">Escolha o <em>seu caminho</em></h2>
       <div class="a1">Uma imersão completa desse conteúdo, com a Thays, custaria <b style="text-decoration:line-through;text-decoration-thickness:1.5px;text-underline-offset:0">R$497.</b></div>
-      <p style="margin:0 auto 8px">No sábado, ela abre tudo ao vivo, em turma — e o primeiro lote entra por <strong style="font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--terra);font-size:1.5em;line-height:1">R$27.</strong></p>
+      <p style="margin:0 auto 8px">No sábado, ela abre tudo ao vivo, em turma. E o primeiro lote entra por <strong style="font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--terra);font-size:1.5em;line-height:1">R$27.</strong></p>
       <p class="a3">Por que tão acessível? Porque é a primeira turma aberta desse formato. Preço de estreia não se repete.</p>
     </div>
 
@@ -343,6 +347,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <div class="preco"><sup>R$</sup>27</div>
         <div class="preco-sub">Lote 1 · depois R$47</div>
         <a class="btn" href="https://lastlink.com/p/C2FEF8A6D/checkout-payment"><span>Garantir pelo menor valor</span></a>
+        <div class="micro" style="margin-top:12px">Acesso confirmado na hora · leva 1 minuto</div>
       </div>
       <div class="card destaque">
         <div class="tag">Acesso completo</div>
@@ -351,19 +356,11 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <div class="preco"><sup>R$</sup>97</div>
         
         <a class="btn" href="https://lastlink.com/p/CEBD01A52/checkout-payment"><span>Quero acesso completo</span></a>
+        <div class="micro" style="margin-top:12px">Acesso confirmado na hora · leva 1 minuto</div>
       </div>
     </div>
+    <div class="vagas rv" style="margin-top:30px;text-transform:none;letter-spacing:.04em;font-size:.85rem;font-style:italic">Garantia de 7 dias: se não era pra você, devolvemos o valor.</div>
     <div class="vagas rv">Vagas limitadas</div>
-  </div>
-</section>
-
-<!-- 06 FILTRO -->
-<section>
-  <div class="grid">
-    <div class="filtros rv">
-      <div class="filtro sim"><strong>É pra você se</strong><p>lidera — empresa, equipe, clínica, carreira — e sente que o que construiu já deveria estar maior. Se está cansada de ser excelente em tudo, menos em receber o que merece por isso.</p></div>
-      <div class="filtro nao"><strong>Não é pra você se</strong><p>procura frase motivacional e energia positiva. Aqui não tem "acredite em você". Tem mecanismo, diagnóstico e movimento.</p></div>
-    </div>
   </div>
 </section>
 
@@ -373,7 +370,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
     <div class="narrow rv">
       <div class="faq">
         <h4>"Não tenho tempo num sábado de manhã."</h4>
-        <p>Se a agenda não tem uma manhã, o bloqueio está operando nela também. Quem virou o gargalo da própria rotina nunca tem uma manhã — e é disso que a aula trata.</p>
+        <p>Se a agenda não tem uma manhã, o bloqueio está operando nela também. Quem virou o gargalo da própria rotina nunca tem uma manhã. E é disso que a aula trata.</p>
       </div>
       <div class="faq">
         <h4>"E se eu não puder ao vivo?"</h4>
@@ -381,7 +378,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
       </div>
       <div class="faq">
         <h4>"Já tentei resolver isso sozinha."</h4>
-        <p>Provavelmente tratando o sintoma — produtividade, agenda, mindset. O padrão continua porque a raiz não foi tocada. É ela que a gente abre no sábado.</p>
+        <p>Provavelmente tratando o sintoma: produtividade, agenda, mindset. O padrão continua porque a raiz não foi tocada. É ela que a gente abre no sábado.</p>
       </div>
     </div>
   </div>
@@ -390,12 +387,12 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <!-- FECHO — o momento de ruptura -->
 <section class="fecho">
   <div class="fecho-grid">
-    <div class="fecho-fig" id="fechoFig"><img src="thays-ruptura.jpg" alt="Thays Moya" loading="lazy"></div>
+    <div class="fecho-fig" id="fechoFig"><picture><source srcset="thays-ruptura.webp" type="image/webp"><img src="thays-ruptura.jpg" alt="Thays Moya" loading="lazy"></picture></div>
     <div class="fecho-copy rv">
       <h2>A mulher mais preparada da sala não deveria ser a que <em>menos cresce.</em></h2>
-      <p>Sábado às 9h você vai entender por que isso vem acontecendo com você — e o que fazer a respeito.</p>
-      <a class="btn" href="#oferta"><span>Quero meu lugar no sábado</span></a>
-      <div class="ps"><b>PS —</b> Você leu até aqui. Sabe o que isso significa? Que você se reconheceu. E agora tem duas opções: fechar a página e "pensar depois"... ou notar que adiar essa decisão é exatamente o padrão que te trouxe até essa página. A aula é sábado. O menor valor acaba quinta.</div>
+      <p>Sábado às 9h você vai entender por que isso vem acontecendo com você. E o que fazer a respeito.</p>
+      <a class="btn" href="#oferta"><span>Ver as opções de acesso</span></a>
+      <div class="ps"><b>PS —</b> Se você leu até aqui, se reconheceu. E adiar essa decisão é exatamente o padrão que te trouxe até essa página. O menor valor acaba quinta.</div>
     </div>
   </div>
 </section>
@@ -410,7 +407,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
     <div class="s1">Ponto de Ruptura · Sáb 04/07</div>
     <div class="s2">Vagas limitadas</div>
   </div>
-  <a href="#oferta">Garantir</a>
+  <a href="#oferta">Ver opções</a>
 </div>
 
 <script>
