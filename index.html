@@ -51,7 +51,7 @@ section{padding:88px 0}
 
 /* ===== TIPOGRAFIA ===== */
 .eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe);font-weight:500}
-.folio{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--terra);font-variant-numeric:oldstyle-nums}
+.folio{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--taupe);font-variant-numeric:oldstyle-nums}
 h1,h2,h3,.display{font-family:'Fraunces',serif;font-optical-sizing:auto;color:var(--ink)}
 h1{font-weight:300;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;letter-spacing:-.02em}
 h2{font-weight:300;font-size:clamp(2rem,4.4vw,3.25rem);line-height:1.1;letter-spacing:-.015em;margin-bottom:28px}
@@ -206,10 +206,12 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 .sticky-cta .s2{font-size:.62rem;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
 .sticky-cta a{flex-shrink:0;background:var(--terra);color:var(--paper);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:15px 28px;min-height:48px;display:flex;align-items:center}
 @media(min-width:861px){.sticky-cta{display:none}}
+@media(max-width:860px){footer{padding-bottom:96px}}
 
 /* ===== REVEAL ===== */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
 .rv.in{opacity:1;transform:none}
+
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   .rv,.fecho-fig img{opacity:1;transform:none;transition:none;clip-path:none}
@@ -227,7 +229,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 </head>
 <body>
 
-<div class="topbar">Primeiro lote encerra <b>02/07</b></div>
+<div class="topbar">Primeiro lote encerra <b>26/06</b></div>
 
 <!-- HERO -->
 <header class="hero">
@@ -241,11 +243,11 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <div><div class="dl1">Horário</div><div class="dl2">9h <span style="font-size:.85rem;color:var(--gray-l)">Brasília</span></div></div>
         <div><div class="dl1">Onde</div><div class="dl2">Zoom</div></div>
       </div>
-      <a class="btn" href="#oferta" style="margin-top:26px"><span>Ver como participar</span></a>
+      <a class="btn" href="#oferta" style="margin-top:26px"><span>Quero participar</span></a>
       <div class="micro">Pagamento seguro</div>
     </div>
     <figure class="hero-fig">
-      <picture><source srcset="thays-hero.webp" type="image/webp"><img src="thays-hero.jpg" alt="Thays Moya" fetchpriority="high"></picture>
+      <picture><source srcset="thays-hero.webp" type="image/webp"><img src="thays-hero.jpg" alt="Thays Moya"></picture>
       <figcaption>Thays Moya · Psicóloga · CRP 14/06866-3</figcaption>
     </figure>
   </div>
@@ -261,10 +263,8 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
       <div class="cena"><i>·</i><span>Mandou a proposta com valor menor do que tinha calculado. De novo.</span></div>
       <div class="cena"><i>·</i><span>Refez uma entrega que já estava pronta, porque "não estava no seu padrão"</span></div>
       <div class="cena"><i>·</i><span>Tem uma decisão parada há semanas esperando uma certeza que não chega</span></div>
-      <div class="cena"><i>·</i><span>A equipe espera sua aprovação pra tudo. E você não consegue soltar.</span></div>
-      <div class="cena"><i>·</i><span>Fechou o melhor mês do ano achando que foi sorte</span></div>
       <p>Cada cena dessas tem um preço: o valor que você não cobrou, a hora refazendo o pronto, a oportunidade que passou. <strong>Some um ano disso e você encontra a diferença entre o negócio que tem e o que já deveria ter.</strong></p>
-      <p>E o pior: de fora, parece virtude. Por isso ninguém te alerta.</p>
+      <p>E o pior: de fora, parece virtude. Te ensinaram que descansar era preguiça, que pedir ajuda era fraqueza, que o seu valor dependia de dar conta de tudo sozinha. Por isso ninguém te alerta.</p>
     </div>
   </div>
 </section>
@@ -294,7 +294,8 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
       </div>
       <p style="margin-top:34px">Um adianto: essa raiz quase nunca está no presente. Ela está em onde você aprendeu que relaxar era perigoso e que o seu valor dependia de dar conta.</p>
       <p style="margin-top:34px">Esses três pontos têm <strong>a mesma raiz</strong>. No sábado eu abro ela ao vivo: você sai sabendo qual ponto é o <strong>seu</strong> dominante, ou se opera nos três.</p>
-      <a class="btn" href="#oferta"><span>Quero descobrir o meu ponto</span></a>
+      <p style="margin-top:34px">Imagina falar o seu preço e ficar em silêncio, sem correr pra justificar. Soltar uma entrega sem revisar três vezes. Tomar a decisão e seguir em frente, leve. <strong>Não é sobre trabalhar mais. É sobre parar de carregar o que não era pra ser seu.</strong></p>
+      <a class="btn" href="#oferta"><span>Quero participar</span></a>
     </div>
   </div>
 </section>
@@ -303,7 +304,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <section class="s-sand">
   <div class="grid">
     <div class="narrow rv" style="grid-column:2/9;margin-bottom:0">
-      <h2>Saindo da imersão, <em>você vai ter:</em></h2>
+      <h2>Com essa imersão, <em>você vai ter:</em></h2>
     </div>
     <div class="levas rv">
       <div class="leva"><strong><span class="folio">1</span>O seu diagnóstico</strong><p>qual dos três pontos domina no seu caso: preço, controle ou decisão</p></div>
@@ -327,7 +328,21 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
     <div class="bio-copy rv">
       <h2>Conheça a <em>mentora</em></h2>
       <p><strong>Psicóloga (CRP 14/06866-3)</strong>, trabalha há mais de dez anos com mulheres que carregam muito: empresárias, líderes, profissionais que sustentam operações, equipes e famílias ao mesmo tempo.</p>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--terra);line-height:1.4;margin:24px 0">Mais de XXX mulheres atendidas em mais de dez anos de clínica.</p>
       <p>Criadora do <strong>Método Inteira</strong>, mentoria para mulheres que querem alcançar muito mais sem pagar o preço errado: pra ela, crescimento profissional não pode custar a vida pessoal, a família e a saúde de quem cresce. Estar no topo e estar inteira não são escolhas opostas.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- O DEPOIS -->
+<section>
+  <div class="grid">
+    <div class="narrow rv">
+      <div class="sec-folio"><span class="folio">·</span><span class="eyebrow" style="color:var(--gray-l)">O depois</span></div>
+      <h2>Imagina <em>segunda-feira:</em></h2>
+      <p>Você manda a proposta com o número cheio e não corre pra justificar. Solta a entrega sem revisar pela quarta vez. Toma a decisão que estava parada há semanas, sem esperar uma certeza que nunca vinha.</p>
+      <p><strong>Não é sobre trabalhar menos. É sobre parar de carregar o que já não era pra ser seu.</strong> A imersão é onde isso começa.</p>
     </div>
   </div>
 </section>
@@ -361,7 +376,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <div class="micro" style="margin-top:12px">Acesso confirmado na hora · leva 1 minuto</div>
       </div>
     </div>
-    <div class="vagas rv" style="margin-top:30px;text-transform:none;letter-spacing:.04em;font-size:.85rem;font-style:italic">Garantia de 7 dias: se não era pra você, devolvemos o valor.</div>
+    <div class="vagas rv" style="margin-top:30px;text-transform:none;letter-spacing:.04em;font-size:.85rem;font-style:italic">Garantia de 7 dias. Se não era pra você, o risco é meu: devolvemos cada centavo.</div>
     <div class="vagas rv">Vagas limitadas</div>
   </div>
 </section>
@@ -370,6 +385,14 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <section class="s-sand">
   <div class="grid">
     <div class="narrow rv">
+      <div class="faq">
+        <h4>"Como recebo o acesso?"</h4>
+        <p>Na hora: o pagamento confirma e o link do grupo exclusivo no WhatsApp já aparece na tela de confirmação (e chega no seu e-mail também). É no grupo que você recebe o link do Zoom no dia da imersão.</p>
+      </div>
+      <div class="faq">
+        <h4>"E se eu participar e achar que não era pra mim?"</h4>
+        <p>Vem na imersão inteira. Se no fim você sentir que já sabia tudo aquilo, é só mandar uma mensagem em até 7 dias e devolvemos cada centavo. O risco é todo meu.</p>
+      </div>
       <div class="faq">
         <h4>"Não tenho tempo num sábado de manhã."</h4>
         <p>Se a agenda não tem uma manhã, o bloqueio está operando nela também. Quem virou o gargalo da própria rotina nunca tem uma manhã. E é disso que a imersão trata.</p>
@@ -382,14 +405,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <h4>"Já tentei resolver isso sozinha."</h4>
         <p>Provavelmente tratando o sintoma: produtividade, agenda, mindset. O padrão continua porque a raiz não foi tocada. É ela que a gente abre na imersão.</p>
       </div>
-    <div class="faq">
-        <h4>"Como recebo o acesso?"</h4>
-        <p>Na hora: o pagamento confirma e o link do grupo exclusivo no WhatsApp já aparece na tela de confirmação (e chega no seu e-mail também). É no grupo que você recebe o link do Zoom no dia da imersão.</p>
-      </div>
-      <div class="faq">
-        <h4>"E se eu participar e achar que não era pra mim?"</h4>
-        <p>Você tem 7 dias de garantia. Manda uma mensagem e devolvemos o valor, sem perguntas.</p>
-      </div>
+    
     </div>
   </div>
 </section>
@@ -401,8 +417,8 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
     <div class="fecho-copy rv">
       <h2>A mulher mais preparada da sala não deveria ser a que <em>menos cresce.</em></h2>
       <p>Sábado às 9h você vai entender por que isso vem acontecendo com você. E o que fazer a respeito.</p>
-      <a class="btn" href="#oferta"><span>Ver as opções de acesso</span></a>
-      <div class="ps"><b>PS —</b> Se você leu até aqui, se reconheceu. E adiar essa decisão é exatamente o padrão que te trouxe até essa página. O menor valor acaba quinta.</div>
+      <a class="btn" href="#oferta"><span>Quero participar</span></a>
+      <div class="ps"><b>PS —</b> Se você leu até aqui, se reconheceu. E adiar essa decisão é exatamente o padrão que te trouxe até essa página. O menor valor acaba dia 26/06.</div>
     </div>
   </div>
 </section>
@@ -415,9 +431,9 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 <div class="sticky-cta" id="sticky">
   <div class="s-info">
     <div class="s1">Ponto de Ruptura · Sáb 04/07</div>
-    <div class="s2">Vagas limitadas</div>
+    <div class="s2">A partir de R$27</div>
   </div>
-  <a href="#oferta">Ver opções</a>
+  <a href="#oferta">Quero participar</a>
 </div>
 
 <script>
