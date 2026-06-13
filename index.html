@@ -208,6 +208,17 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 @media(min-width:861px){.sticky-cta{display:none}}
 @media(max-width:860px){footer{padding-bottom:96px}}
 
+
+/* CTA flutuante desktop — aparece após o hero, sai na oferta */
+.float-cta{position:fixed;bottom:32px;right:32px;z-index:65;display:none;align-items:center;gap:16px;background:var(--paper);border:1px solid var(--hair);padding:14px 14px 14px 24px;box-shadow:0 8px 40px rgba(26,26,26,.12);transform:translateY(20px);opacity:0;transition:transform .4s cubic-bezier(.2,.6,.2,1),opacity .4s ease;pointer-events:none}
+.float-cta.on{transform:translateY(0);opacity:1;pointer-events:auto}
+.float-cta .fc-txt{line-height:1.3}
+.float-cta .fc1{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink)}
+.float-cta .fc2{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-weight:500}
+.float-cta a{background:var(--terra);color:var(--paper);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:14px 24px;white-space:nowrap;transition:background .25s}
+.float-cta a:hover{background:#A84A2F}
+@media(min-width:861px){.float-cta{display:flex}}
+
 /* ===== REVEAL ===== */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -427,6 +438,15 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 
 <footer>Ponto de Ruptura · <a href="https://instagram.com/thayssmoya" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--hair)">@thayssmoya</a> · MMXXVI</footer>
 
+<!-- CTA flutuante desktop -->
+<div class="float-cta" id="floatCta">
+  <div class="fc-txt">
+    <div class="fc1">Ponto de Ruptura</div>
+    <div class="fc2">A partir de R$27</div>
+  </div>
+  <a href="#oferta">Quero participar</a>
+</div>
+
 <!-- STICKY CTA MOBILE -->
 <div class="sticky-cta" id="sticky">
   <div class="s-info">
@@ -474,6 +494,8 @@ function tick(){
   const r = oferta.getBoundingClientRect();
   const onOffer = r.top < window.innerHeight && r.bottom > 0;
   sticky.classList.toggle('on', past && !onOffer);
+  const fc = document.getElementById('floatCta');
+  if (fc) fc.classList.toggle('on', past && !onOffer);
 }
 window.addEventListener('scroll', tick, { passive: true });
 tick();
