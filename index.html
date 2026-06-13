@@ -66,9 +66,9 @@ p strong{color:var(--ink);font-weight:500}
 .sec-folio .eyebrow{color:var(--gray-l)}
 
 /* ===== BOTÃO ===== */
-.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:500;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;padding:22px 48px;min-height:48px;position:relative;overflow:hidden;transition:color .35s ease}
+.btn{display:inline-block;background:var(--terra);color:var(--paper);text-decoration:none;font-weight:500;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;padding:22px 48px;min-height:48px;position:relative;overflow:hidden;transition:color .35s ease}
 .btn span{position:relative;z-index:1}
-.btn::before{content:"";position:absolute;inset:0;background:var(--terra);clip-path:inset(0 100% 0 0);transition:clip-path .4s cubic-bezier(.7,0,.2,1)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);clip-path:inset(0 100% 0 0);transition:clip-path .4s cubic-bezier(.7,0,.2,1)}
 .btn:hover::before{clip-path:inset(0 0 0 0)}
 .btn:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
 .micro{font-size:.75rem;color:var(--gray-l);letter-spacing:.14em;text-transform:uppercase;margin-top:14px}
@@ -204,7 +204,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
 .sticky-cta .s-info{flex:1;min-width:0}
 .sticky-cta .s1{font-size:.82rem;color:var(--ink);font-weight:500}
 .sticky-cta .s2{font-size:.62rem;color:var(--terra);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
-.sticky-cta a{flex-shrink:0;background:var(--ink);color:var(--paper);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:15px 28px;min-height:48px;display:flex;align-items:center}
+.sticky-cta a{flex-shrink:0;background:var(--terra);color:var(--paper);text-decoration:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:15px 28px;min-height:48px;display:flex;align-items:center}
 @media(min-width:861px){.sticky-cta{display:none}}
 
 /* ===== REVEAL ===== */
@@ -292,6 +292,7 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <h3>A decisão</h3>
         <p>Não falta dado; falta uma garantia de não errar que não existe.</p>
       </div>
+      <p style="margin-top:34px">Um adianto: essa raiz quase nunca está no presente. Ela está em onde você aprendeu que relaxar era perigoso e que o seu valor dependia de dar conta.</p>
       <p style="margin-top:34px">Esses três pontos têm <strong>a mesma raiz</strong>. No sábado eu abro ela ao vivo: você sai sabendo qual ponto é o <strong>seu</strong> dominante, ou se opera nos três.</p>
       <a class="btn" href="#oferta"><span>Quero descobrir o meu ponto</span></a>
     </div>
@@ -381,6 +382,14 @@ footer{padding:46px 24px;text-align:center;font-size:.68rem;letter-spacing:.3em;
         <h4>"Já tentei resolver isso sozinha."</h4>
         <p>Provavelmente tratando o sintoma: produtividade, agenda, mindset. O padrão continua porque a raiz não foi tocada. É ela que a gente abre na imersão.</p>
       </div>
+    <div class="faq">
+        <h4>"Como recebo o acesso?"</h4>
+        <p>Na hora: o pagamento confirma e o link do grupo exclusivo no WhatsApp já aparece na tela de confirmação (e chega no seu e-mail também). É no grupo que você recebe o link do Zoom no dia da imersão.</p>
+      </div>
+      <div class="faq">
+        <h4>"E se eu participar e achar que não era pra mim?"</h4>
+        <p>Você tem 7 dias de garantia. Manda uma mensagem e devolvemos o valor, sem perguntas.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -452,6 +461,17 @@ function tick(){
 }
 window.addEventListener('scroll', tick, { passive: true });
 tick();
+
+// Eventos de conversão GA4
+document.querySelectorAll('a[href*="lastlink.com"]').forEach(a => {
+  a.addEventListener('click', () => {
+    const plano = a.href.includes('C2FEF8A6D') ? 'ao_vivo_27' : 'gravacao_97';
+    gtag('event', 'begin_checkout', { plano: plano });
+  });
+});
+document.querySelectorAll('a[href="#oferta"]').forEach(a => {
+  a.addEventListener('click', () => gtag('event', 'cta_oferta', { origem: a.textContent.trim() }));
+});
 </script>
 
 </body>
