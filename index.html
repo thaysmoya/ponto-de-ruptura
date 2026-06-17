@@ -84,7 +84,6 @@ p strong{color:var(--ink);font-weight:500}
 .hero-eyebrow{position:absolute;top:60px;left:0;z-index:5;text-align:left;padding:0 64px;width:50%}
 .hero-eyebrow .eyebrow{color:var(--taupe)}
 .hero-overlay { display:none; }
-.hero-seam{display:none}
 .hero .grid { position: absolute; inset:0; z-index: 3; width: 100%; max-width:none; display:flex; flex-direction:column; justify-content:center; padding: 0 64px; grid-template-columns:none; }
 .hero-copy { width: 46%; align-self: center; color: var(--paper); }
 .hero-copy .eyebrow { color: var(--taupe); display: block; margin-bottom: 32px; }
@@ -123,12 +122,18 @@ p strong{color:var(--ink);font-weight:500}
   .dataline > div{padding-right:0;margin-right:0;border-right:none;width:33%}
   .dl2{font-size:1.1rem;white-space:nowrap}
   .hero-copy .btn{margin-top:20px !important;padding:22px 40px;min-height:60px;width:100%;font-size:.85rem;letter-spacing:.16em;box-shadow:0 10px 34px rgba(184,91,53,.5);animation:ctaPulse 2.4s ease-in-out infinite}
-  .hero-seam{display:block;height:46px;background:linear-gradient(to bottom,var(--dark) 0%,var(--paper) 100%)}
-  main>section:first-of-type{padding-top:40px}
+  main>section:first-of-type{padding-top:44px}
   .hero-meta{display:none}
 }
 
 .s-light { background: var(--paper); }
+#shift{background:var(--shift-bg, var(--paper))}
+#shift h2{color:var(--shift-fg, var(--ink))}
+#shift h2 em{color:var(--accent2)}
+#shift .cena{color:var(--shift-fg2, var(--gray));border-color:var(--shift-hair, var(--hair))}
+#shift .cena i{color:var(--accent2)}
+#shift p{color:var(--shift-fg2, var(--gray))}
+#shift p strong{color:var(--shift-fg, var(--ink))}
 .narrow { grid-column: 3 / 11; }
 @media(max-width:860px){.narrow{grid-column:1/-1}}
 .cena { display: grid; grid-template-columns: 40px 1fr; gap: 24px; align-items: baseline; padding: 32px 0; border-bottom: 1px solid var(--hair); font-size: 1.15rem; color: var(--gray); }
@@ -292,11 +297,9 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
   <div class="hero-meta">Thays Moya · Psicóloga · CRP 14/06866-3</div>
 </header>
 
-<div class="hero-seam" aria-hidden="true"></div>
-
 <main>
 
-<section class="s-light">
+<section class="s-light" id="shift">
   <div class="grid">
     <div class="narrow rv">
       <h2>Reconhece alguma <em>dessas cenas?</em></h2>
@@ -478,6 +481,27 @@ function tick(){
 }
 window.addEventListener('scroll', tick, { passive: true });
 tick();
+
+// recolorização no scroll: 2ª dobra começa escura (sem corte) e clareia ao rolar
+const shiftEl = document.getElementById('shift');
+function lerp(a,b,t){return a+(b-a)*t;}
+function mix(c1,c2,t){return 'rgb('+Math.round(lerp(c1[0],c2[0],t))+','+Math.round(lerp(c1[1],c2[1],t))+','+Math.round(lerp(c1[2],c2[2],t))+')';}
+const _DARK=[18,20,19],_PAPER=[247,246,242],_INK=[17,20,18],_GL=[164,166,164],_GR=[74,79,76];
+function shiftUpdate(){
+  if(!shiftEl) return;
+  const vh=window.innerHeight;
+  const top=shiftEl.getBoundingClientRect().top;
+  const startY=vh, endY=vh*0.42;
+  let p=(startY-top)/(startY-endY);
+  p=p<0?0:p>1?1:p;
+  shiftEl.style.setProperty('--shift-bg', mix(_DARK,_PAPER,p));
+  shiftEl.style.setProperty('--shift-fg', mix(_PAPER,_INK,p));
+  shiftEl.style.setProperty('--shift-fg2', mix(_GL,_GR,p));
+  shiftEl.style.setProperty('--shift-hair','rgba('+Math.round(lerp(247,17,p))+','+Math.round(lerp(246,20,p))+','+Math.round(lerp(242,18,p))+',.15)');
+}
+window.addEventListener('scroll', shiftUpdate, { passive: true });
+window.addEventListener('resize', shiftUpdate);
+shiftUpdate();
 </script>
 
 </body>
