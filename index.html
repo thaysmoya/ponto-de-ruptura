@@ -299,7 +299,7 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
 
 <main>
 
-<section class="s-light" id="shift">
+<section class="s-light" id="shift" style="--shift-bg:#121413;--shift-fg:#F7F6F2;--shift-fg2:#A4A6A4;--shift-hair:rgba(247,246,242,.15)">
   <div class="grid">
     <div class="narrow rv">
       <h2>Reconhece alguma <em>dessas cenas?</em></h2>
@@ -491,7 +491,7 @@ function shiftUpdate(){
   if(!shiftEl) return;
   const vh=window.innerHeight;
   const top=shiftEl.getBoundingClientRect().top;
-  const startY=vh, endY=vh*0.42;
+  const startY=vh*0.55, endY=vh*0.08;
   let p=(startY-top)/(startY-endY);
   p=p<0?0:p>1?1:p;
   shiftEl.style.setProperty('--shift-bg', mix(_DARK,_PAPER,p));
