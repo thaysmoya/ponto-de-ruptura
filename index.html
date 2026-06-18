@@ -199,6 +199,11 @@ p strong{color:var(--ink);font-weight:500}
 .card.destaque .btn::before { background: var(--accent2); }
 .card.destaque .btn:hover { color: var(--paper); }
 .vagas { grid-column: 1 / -1; text-align: center; font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gray-l); margin-top: 48px; }
+@media(max-width:860px){
+  .oferta-head{margin-bottom:36px}
+  #oferta{scroll-margin-top:28px}
+  .vagas{margin-top:32px}
+}
 
 .faq { padding: 40px 0; border-bottom: 1px solid var(--hair); }
 .faq:first-of-type { border-top: 1px solid var(--ink); }
@@ -459,6 +464,14 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
 }), { threshold: .15, rootMargin: '0px 0px -60px 0px' });
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
+// ao clicar num CTA que pula pra uma seção, revela já o conteúdo dela (cards de preço etc.)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => {
+    const id = a.getAttribute('href').slice(1);
+    const target = id && document.getElementById(id);
+    if (target) target.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+  });
+});
 const ff = document.getElementById('fechoFig');
 const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ ff.classList.add('in'); io2.unobserve(ff); } }), { threshold: .25 });
 io2.observe(ff);
