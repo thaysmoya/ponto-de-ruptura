@@ -298,7 +298,7 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
 </head>
 <body>
 
-<div class="topbar">Primeiro lote encerra <b>26/06</b></div>
+<div class="topbar">O valor sobe a cada lote · <b>garanta o de hoje</b></div>
 
 <header class="hero">
   <div class="hero-bg">
@@ -398,16 +398,16 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
       <div class="eyebrow" style="margin-bottom: 24px;">Acesso</div>
       <h2 style="text-align:center;margin-bottom:34px">Escolha o <em>seu caminho</em></h2>
       <div class="a1">Uma imersão completa desse conteúdo, com a Thays, custaria <b style="text-decoration:line-through;text-decoration-thickness:1.5px;text-underline-offset:0">R$497.</b></div>
-      <p style="margin:0 auto 8px; text-align:center;">No sábado, ela abre tudo ao vivo, em turma. E o primeiro lote entra por <strong style="font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--accent2);font-size:1.5em;line-height:1">R$27.</strong></p>
+      <p style="margin:0 auto 8px; text-align:center;">No sábado, ela abre tudo ao vivo, em turma. E o lote atual entra por <strong style="font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--accent2);font-size:1.5em;line-height:1">R$47.</strong></p>
       <p class="a3">Por que tão acessível? Porque é a primeira turma aberta desse formato.</p>
     </div>
     <div class="cards rv" id="planos">
       <div class="card">
         <h3>Ao vivo</h3>
         <div class="inc">Imersão completa ao vivo<br>+ grupo exclusivo</div>
-        <div class="preco"><sup>R$</sup>27</div>
-        <div class="preco-sub">Lote 1</div>
-        <a class="btn" href="https://lastlink.com/p/CD356C54B/checkout-payment"><span>Garantir menor valor</span></a>
+        <div class="preco"><sup>R$</sup>47</div>
+        <div class="preco-sub">Lote 2</div>
+        <a class="btn" href="https://lastlink.com/p/CC3F80507/checkout-payment"><span>Garantir menor valor</span></a>
       </div>
       <div class="card destaque">
         <div class="tag">Acesso completo</div>
@@ -440,7 +440,7 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
       <h2>A mulher mais preparada da sala não deveria ser a que <em>menos cresce.</em></h2>
       <p>Sábado, às 9h, você vai entender o que tem travado o seu próximo nível. E sai da imersão com clareza e direção pra finalmente avançar.</p>
       <a class="btn" href="#planos"><span>Quero participar</span></a>
-      <div class="ps"><b>PS —</b> Se você leu até aqui, se reconheceu. E adiar essa decisão é exatamente o padrão que te trouxe até essa página. O menor valor acaba dia 26/06.</div>
+      <div class="ps"><b>PS —</b> Se você leu até aqui, se reconheceu. E adiar essa decisão é exatamente o padrão que te trouxe até essa página. O valor sobe a cada lote — o de hoje é o menor que você ainda vê.</div>
     </div>
   </div>
 </section>
@@ -450,12 +450,12 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
 <footer>Ponto de Ruptura · <a href="https://instagram.com/thayssmoya" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--hair)">@thayssmoya</a> · 2026<br><span style="display:inline-block;margin-top:12px;letter-spacing:.06em;text-transform:none;font-size:.8rem">Dúvidas ou problemas no acesso? Fale com a Thays: <a href="https://wa.me/5567999208015" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:none;border-bottom:1px solid var(--hair)">(67) 99920-8015</a></span></footer>
 
 <div class="float-cta" id="floatCta">
-  <div><div class="fc1">Ponto de Ruptura</div><div class="fc2">A partir de R$27</div></div>
+  <div><div class="fc1">Ponto de Ruptura</div><div class="fc2">A partir de R$47</div></div>
   <a href="#planos">Quero participar</a>
 </div>
 
 <div class="sticky-cta" id="sticky">
-  <div class="s-info"><div class="s1">Sáb 04/07</div><div class="s2">A partir de R$27</div></div>
+  <div class="s-info"><div class="s1">Sáb 04/07</div><div class="s2">A partir de R$47</div></div>
   <a href="#planos">Participar</a>
 </div>
 
@@ -502,13 +502,13 @@ const hero = document.querySelector('.hero');
 const oferta = document.getElementById('oferta');
 document.querySelectorAll('a[href*="lastlink.com"]').forEach(a => {
   a.addEventListener('click', () => {
-    const aoVivo = a.href.includes('CD356C54B');
-    const plano = aoVivo ? 'ao_vivo_27' : 'gravacao_97';
+    const aoVivo = a.href.includes('CC3F80507');
+    const plano = aoVivo ? 'ao_vivo_47' : 'gravacao_97';
     gtag('event', 'begin_checkout', { plano: plano });
     if (window.fbq) fbq('track', 'InitiateCheckout', {
       content_name: 'Ponto de Ruptura',
       content_category: plano,
-      value: aoVivo ? 27 : 97,
+      value: aoVivo ? 47 : 97,
       currency: 'BRL'
     });
   });
