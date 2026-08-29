@@ -156,6 +156,10 @@ p strong{color:var(--ink);font-weight:500}
 @media(max-width:640px){.statline{grid-template-columns:1fr;gap:12px}}
 .marca{color:var(--accent2) !important;font-weight:500}
 #shift .marca{color:var(--accent2) !important}
+.antes{font-size:1.12rem}
+.antes strong{font-weight:500}
+h2.pergunta{font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.12;margin:26px 0 30px}
+@media(max-width:860px){h2.pergunta{font-size:1.72rem;line-height:1.18;margin:20px 0 24px}.antes{font-size:1.02rem}}
 .narrow { grid-column: 3 / 11; }
 @media(max-width:860px){.narrow{grid-column:1/-1}}
 .cena { display: grid; grid-template-columns: 40px 1fr; gap: 24px; align-items: baseline; padding: 32px 0; border-bottom: 1px solid var(--hair); font-size: 1.15rem; color: var(--gray); }
@@ -380,8 +384,9 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
 <section class="s-light" id="shift" style="--shift-bg:#121413;--shift-fg:#F7F6F2;--shift-fg2:#A4A6A4;--shift-hair:rgba(247,246,242,.15)">
   <div class="grid">
     <div class="narrow rv">
-      <h2>Se você tirar três semanas de férias amanhã e desligar o celular, <em>o que acontece com a sua empresa?</em></h2>
-      <p>Você construiu muito. Fez o faturamento subir, contratou equipe, aguentou ano difícil.</p>
+      <p class="antes">Você construiu muito. Fez o faturamento subir, contratou equipe, aguentou ano difícil.</p>
+      <p class="antes"><strong>Mas responda rápido:</strong></p>
+      <h2 class="pergunta">Se você precisar se afastar por três semanas sem poder responder nenhuma mensagem no WhatsApp, <em>o que acontece com a sua empresa?</em></h2>
       <p>Se a resposta te deu um frio na barriga, você não tem uma empresa desorganizada. <strong>Você tem um negócio que está montado inteiramente em cima das suas costas.</strong></p>
       <p>O problema não está na sua equipe e não está no mercado. Está na arquitetura que você montou, com você no centro de cada detalhe:</p>
       <div class="cena"><i>·</i><span>Todo preço precisa do seu aval.</span></div>
