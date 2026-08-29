@@ -154,6 +154,8 @@ p strong{color:var(--ink);font-weight:500}
 .statline .t{font-size:1rem;line-height:1.5;color:var(--shift-fg2,var(--gray))}
 .statline .src{display:block;font-size:.78rem;color:var(--gray-l);margin-top:6px;letter-spacing:.02em}
 @media(max-width:640px){.statline{grid-template-columns:1fr;gap:12px}}
+.marca{color:var(--accent2) !important;font-weight:500;background-image:linear-gradient(to top,rgba(184,91,53,.22) 0 .3em,transparent .3em);padding:0 .06em}
+#shift .marca{color:var(--accent2) !important}
 .narrow { grid-column: 3 / 11; }
 @media(max-width:860px){.narrow{grid-column:1/-1}}
 .cena { display: grid; grid-template-columns: 40px 1fr; gap: 24px; align-items: baseline; padding: 32px 0; border-bottom: 1px solid var(--hair); font-size: 1.15rem; color: var(--gray); }
@@ -385,7 +387,7 @@ footer { padding: 56px 24px; text-align: center; font-size: .65rem; letter-spaci
       <div class="cena"><i>·</i><span>Todo preço precisa do seu aval.</span></div>
       <div class="cena"><i>·</i><span>Toda dúvida de cliente sobe para a sua mesa.</span></div>
       <div class="cena"><i>·</i><span>Todo problema trava até você entrar e resolver.</span></div>
-      <p>Com o tempo, o time aprende o caminho mais seguro: esperar por você. E você chama isso de falta de iniciativa, quando na verdade o sistema está funcionando exatamente como foi treinado.</p>
+      <p>Com o tempo, o time <span class="marca">aprende</span> o caminho mais seguro: esperar por você. E você chama isso de falta de <span class="marca">iniciativa</span>, quando na verdade o sistema está funcionando exatamente como foi treinado.</p>
     </div>
   </div>
 </section>
