@@ -595,7 +595,7 @@ formInscricao.addEventListener('submit', function(e){
     if (bc) bc.addEventListener('click', function(){
       var c = document.getElementById('caso').value.trim();
       if (FORM_ENDPOINT && c) {
-        fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'},
+        fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'},
           body: JSON.stringify(Object.assign({}, dados, {caso: c}))}).catch(function(){});
       }
       bc.parentNode.innerHTML = '<h3>Recebido em sigilo.</h3><p>A Thays vai ler antes da quarta. Até dia 23, às 20h.</p>';
@@ -610,7 +610,7 @@ formInscricao.addEventListener('submit', function(e){
 
   fetch(FORM_ENDPOINT, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: {'Content-Type': 'text/plain;charset=utf-8'},
     body: JSON.stringify(dados)
   }).then(sucesso).catch(function(){
     btn.disabled = false;
