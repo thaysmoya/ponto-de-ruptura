@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thays Moya//Ponto de Ruptura//PT-BR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Sao_Paulo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ponto-de-ruptura-23set2026@thaysmoya.github.io
+DTSTAMP:20260829T120000Z
+DTSTART;TZID=America/Sao_Paulo:20260923T200000
+DTEND;TZID=America/Sao_Paulo:20260923T213000
+SUMMARY:Ponto de Ruptura · encontro ao vivo com Thays Moya
+DESCRIPTION:Encontro prático de diagnóstico ao vivo para mulheres que dirig
+ em negócios.\n\nO link de acesso ao Zoom chega no seu WhatsApp.\n\nNão fic
+ a gravado: a dinâmica acontece na sala ao vivo.\n\nThays Moya · Psicóloga 
+ · CRP 14/06866-3
+LOCATION:Zoom (link enviado por WhatsApp)
+URL:https://thaysmoya.github.io/ponto-de-ruptura/
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:Ponto de Ruptura começa em 1 hora
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Amanhã, 20h: Ponto de Ruptura
+END:VALARM
+END:VEVENT
+END:VCALENDAR
