@@ -51,6 +51,8 @@ src="https://www.facebook.com/tr?id=1021570017037883&ev=PageView&noscript=1"
   --accent2: #B85B35;
   --accent2-dark: #A34C29;
   --accent2-light: #CE7550;
+  --whatsapp: #25D366;
+  --whatsapp-hover: #20BA5A;
   --dark: #121413;
   --dark-card: #1B1E1C;
   --hair: rgba(17,20,18,.15);
@@ -82,7 +84,7 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--accent2)}
 .dl-icon{color:var(--accent2-light)}
 p{margin-bottom:20px;max-width:60ch}
 p strong{color:var(--ink);font-weight:600}
-.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent2-dark);color:var(--paper);text-decoration:none;font-weight:600;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;padding:18px 40px;min-height:52px;position:relative;overflow:hidden;transition:all .25s ease;border:1px solid var(--accent2-dark);box-shadow:0 8px 24px rgba(163,76,41,.28);cursor:pointer;font-family:'Hanken Grotesk',sans-serif;}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent2-dark);color:var(--paper);text-decoration:none;font-weight:600;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;padding:18px 40px;min-height:52px;position:relative;overflow:hidden;transition:all .25s ease;border:1px solid var(--accent2-dark);box-shadow:0 8px 24px rgba(163,76,41,.28);cursor:pointer;font-family:'Hanken Grotesk',sans-serif;}
 .btn span{position:relative;z-index:1}
 .btn::before{content:"";position:absolute;inset:0;background:var(--terra);clip-path:inset(0 100% 0 0);transition:clip-path .4s cubic-bezier(.7,0,.2,1)}
 .btn:hover::before{clip-path:inset(0 0 0 0)}
@@ -110,17 +112,21 @@ p strong{color:var(--ink);font-weight:600}
 .dl-text .dl1{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:#8C918B;display:block}
 .dl-text .dl2{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--paper);line-height:1.1;margin-top:2px}
 @media(max-width:860px){
-  .hero{min-height:auto;margin-top:40px}
+  .hero{min-height:auto;margin-top:40px;padding-top:0}
   .topbar{font-size:.58rem;letter-spacing:.1em;padding:9px 10px;white-space:nowrap}
-  .hero-bg{position:relative;width:100%;height:28vh;min-height:190px;max-height:250px}
-  .hero-bg::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:120px;background:linear-gradient(to bottom, rgba(18,20,19,0) 0%, rgba(18,20,19,1) 100%);z-index:2}
-  .hero .grid{padding:20px 20px 32px}
-  .hero-copy h1{margin-bottom:14px}
-  .brand-mark{margin-bottom:10px}
-  .brand-rule{margin-bottom:14px}
-  .dataline{margin-top:20px;padding-top:16px}
+  .hero-bg{position:relative;width:100%;height:34vh;min-height:240px;max-height:300px}
+  .hero-bg img{object-position:center 10%}
+  .hero-bg::before{display:none}
+  .hero-bg::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:70px;background:linear-gradient(to bottom, rgba(18,20,19,0) 0%, rgba(18,20,19,.85) 75%, rgba(18,20,19,1) 100%);z-index:2}
+  .hero .grid{padding:18px 20px 32px}
   .hero-copy{width:100%}
-  .dataline{grid-template-columns:1fr;gap:12px}
+  .hero-copy .eyebrow{font-size:.62rem;margin-bottom:8px}
+  .brand-mark{margin-bottom:10px}
+  .brand-rule{margin-bottom:12px}
+  .hero-copy h1{font-size:1.24rem;line-height:1.3;margin-bottom:14px}
+  .hero-copy .lead{font-size:.95rem;line-height:1.5;margin-bottom:0}
+  .hero-copy .btn{width:100%;margin-top:18px!important;padding:18px 24px;min-height:54px;font-size:.82rem;box-shadow:0 8px 30px rgba(163,76,41,.5)}
+  .dataline{grid-template-columns:1fr;gap:10px;margin-top:18px;padding-top:16px}
 }
 .narrow{grid-column:3/11}
 @media(max-width:860px){.narrow{grid-column:1/-1}}
@@ -183,10 +189,23 @@ p strong{color:var(--ink);font-weight:600}
 .field input:focus, .field select:focus{outline:none;border-color:var(--accent2)}
 .field select option{background:var(--dark);color:var(--paper)}
 .inscricao-wrap .btn{width:100%;margin-top:10px}
+#obrigado{display:none;text-align:center}
 #obrigado strong{color:var(--paper)}
-.ob-box{margin:24px 0;padding:18px;background:rgba(247,246,242,.06);border:1px solid var(--hair-light)}
-.ob-box strong{display:block;margin-bottom:10px}
-.ob-box a{display:block;color:var(--accent2);text-decoration:none;font-weight:600;padding:5px 0}
+.obrigado-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.15);border:1px solid var(--whatsapp);color:var(--whatsapp);padding:6px 14px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:20px;margin-bottom:16px}
+.obrigado-title{font-family:'Fraunces',serif;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:400;color:var(--paper);line-height:1.2;margin-bottom:10px}
+.obrigado-sub{color:#C9CCC9;font-size:1rem;margin:0 auto 26px;max-width:46ch}
+.btn-whatsapp-destaque{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;background:var(--whatsapp);color:#0C2413!important;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;padding:22px 20px;border-radius:4px;box-shadow:0 12px 35px rgba(37,211,102,.38);transition:background .25s ease,transform .25s ease,box-shadow .25s ease;animation:waPulse 2.2s ease-in-out infinite}
+.btn-whatsapp-destaque:hover{background:var(--whatsapp-hover);transform:translateY(-2px);box-shadow:0 16px 42px rgba(37,211,102,.5)}
+.btn-whatsapp-destaque:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.btn-whatsapp-destaque svg{width:26px;height:26px;fill:currentColor;flex-shrink:0}
+@keyframes waPulse{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.35)}50%{box-shadow:0 12px 42px rgba(37,211,102,.7)}}
+.btn-whatsapp-aviso{display:block;font-size:.82rem;color:#8E948F;margin-top:10px;line-height:1.4}
+.calendar-link-subtle{display:inline-flex;align-items:center;gap:8px;margin-top:24px;color:#A4A6A4;text-decoration:none;font-size:.85rem;transition:color .2s;padding:8px 12px;border-bottom:1px dotted var(--hair-light)}
+.calendar-link-subtle:hover,.calendar-link-subtle:focus-visible{color:var(--paper)}
+.box-caso-container{margin-top:36px;padding-top:28px;border-top:1px solid var(--hair-light);text-align:left}
+.ob-box{margin-top:14px;padding:16px 18px;background:rgba(247,246,242,.08);border-left:2px solid var(--accent2-light)}
+.ob-box strong{display:block;margin-bottom:4px;color:var(--paper)}
+.ob-box p{margin:0;color:#A4A6A4;font-size:.9rem}
 .faq-box{padding:24px 0;border-bottom:1px solid var(--hair)}
 .faq-box:first-of-type{border-top:1px solid var(--ink)}
 .faq-box h4{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:400;color:var(--ink);margin-bottom:10px}
@@ -201,7 +220,7 @@ footer{padding:50px 20px;text-align:center;font-size:.65rem;letter-spacing:.25em
 @media(min-width:861px){.sticky-cta{display:none}}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn::before{transition:none}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn::before{transition:none}.btn-whatsapp-destaque{animation:none}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -410,22 +429,26 @@ footer{padding:50px 20px;text-align:center;font-size:.65rem;letter-spacing:.25em
         </div>
         <button type="submit" class="btn"><span>Confirmar Minha Vaga</span></button>
       </form>
-      <div id="obrigado" style="display:none;">
-        <h3 style="color:var(--paper);font-size:1.8rem;margin-bottom:8px;">Vaga confirmada.</h3>
-        <p style="color:#A4A6A4;">O link de acesso à sala do Zoom chegará diretamente no seu WhatsApp.</p>
-        <div class="ob-box">
-          <strong>Próximos passos:</strong>
-          <a href="https://chat.whatsapp.com/K9nEDm9vln67LsuQRZqpn6" target="_blank" rel="noopener">Entrar no grupo silencioso de avisos no WhatsApp ↗</a>
-          <a href="evento.ics" download="ponto-de-ruptura-23set.ics">Adicionar ao meu calendário, com lembrete 1h antes ↓</a>
+      <div id="obrigado" role="status" aria-live="polite">
+        <div class="obrigado-badge"><span aria-hidden="true">✓</span> Vaga pré-confirmada</div>
+        <h3 class="obrigado-title">Falta um passo para receber o link da sala:</h3>
+        <p class="obrigado-sub">Entre no grupo oficial de avisos. É por lá que o link do Zoom e os materiais do encontro chegam até você.</p>
+        <a href="https://chat.whatsapp.com/K9nEDm9vln67LsuQRZqpn6" target="_blank" rel="noopener" class="btn-whatsapp-destaque">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.04 20.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+          <span>Entrar no grupo de avisos ↗</span>
+        </a>
+        <span class="btn-whatsapp-aviso">Grupo silencioso. Só a Thays e a equipe enviam o link e os lembretes da sala.</span>
+        <div>
+          <a href="evento.ics" download="ponto-de-ruptura-23set.ics" class="calendar-link-subtle">Adicionar lembrete ao calendário, 1h antes ↓</a>
         </div>
-        <div id="box-caso">
-          <p style="color:var(--paper);font-weight:500;">Quer ter o seu caso analisado no encontro?</p>
-          <p style="color:#8C918B;font-size:.9rem;">Escreva em uma frase qual é a decisão ou conversa que você está evitando na sua empresa hoje:</p>
-          <div class="field" style="margin-top:10px;">
+        <div class="box-caso-container" id="box-caso">
+          <p style="color:var(--paper);font-weight:500;font-size:1.05rem;margin-bottom:4px;">Quer ter o seu caso analisado no encontro?</p>
+          <p style="color:#8C918B;font-size:.88rem;margin-bottom:12px;">Escreva em uma frase qual é a decisão ou conversa que você está evitando na sua empresa hoje:</p>
+          <div class="field">
             <label for="caso">Em uma frase</label>
             <input type="text" id="caso" name="caso" placeholder="Ex.: não consigo demitir uma funcionária / confiro tudo o que a equipe faz">
           </div>
-          <button type="button" class="btn" id="btn-caso"><span>Enviar em Sigilo</span></button>
+          <button type="button" class="btn" id="btn-caso" style="width:auto;padding:14px 28px;min-height:46px;font-size:.74rem;"><span>Enviar em Sigilo</span></button>
         </div>
       </div>
     </div>
@@ -531,13 +554,15 @@ formInscricao.addEventListener('submit', function(e){
     if (window.fbq) fbq('track', 'Lead', { content_name: 'Ponto de Ruptura 23set' });
     if (window.gtag) gtag('event', 'generate_lead', { evento: 'ponto_de_ruptura_23set' });
     formInscricao.style.display = 'none';
-    document.getElementById('obrigado').style.display = 'block';
+    const obrigado = document.getElementById('obrigado');
+    obrigado.style.display = 'block';
+    obrigado.scrollIntoView({ behavior: 'smooth', block: 'center' });
     const bc = document.getElementById('btn-caso');
     if (bc) {
       bc.addEventListener('click', function(){
         const campo = document.getElementById('caso');
         const c = campo.value.trim();
-        if (!c) { campo.style.borderColor = 'var(--accent2)'; campo.focus(); return; }
+        if (!c) { campo.style.borderColor = 'var(--accent2-light)'; campo.focus(); return; }
         if (FORM_ENDPOINT) {
           fetch(FORM_ENDPOINT, {
             method:'POST',
@@ -547,7 +572,7 @@ formInscricao.addEventListener('submit', function(e){
         }
         document.getElementById('box-caso').innerHTML =
           '<div class="ob-box"><strong>Recebido em sigilo.</strong>' +
-          '<p style="margin:0;color:#A4A6A4;font-size:.9rem;">A Thays vai ler antes do encontro. Até dia 23, às 20h.</p></div>';
+          '<p>A Thays vai ler antes do encontro. Até dia 23, às 20h.</p></div>';
       });
     }
   }
