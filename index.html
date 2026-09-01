@@ -233,33 +233,20 @@ p strong{color:var(--ink);font-weight:600}
 .inscricao-wrap .btn{width:100%;margin-top:10px}
 /* PÓS-CADASTRO */
 #obrigado{display:none;text-align:center;}
-.obrigado-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:rgba(37,211,102,.15);
-  border:1px solid var(--whatsapp);
-  color:var(--whatsapp);
-  padding:6px 14px;
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-weight:600;
-  border-radius:20px;
-  margin-bottom:14px;
-}
+
 .obrigado-title{
   font-family:'Fraunces',serif;
-  font-size:clamp(1.6rem,4vw,2.2rem);
+  font-size:clamp(1.95rem,5.4vw,2.7rem);
   font-weight:400;
   color:var(--paper);
-  line-height:1.15;
-  margin-bottom:8px;
+  line-height:1.1;
+  margin-bottom:22px;
 }
 .obrigado-sub{
-  color:#C9CCC9;
-  font-size:.95rem;
-  margin-bottom:22px;
+  color:#A4A6A4;
+  font-size:.9rem;
+  line-height:1.5;
+  margin:18px 0 0;
 }
 .btn-whatsapp-destaque{
   display:flex;
@@ -315,22 +302,7 @@ p strong{color:var(--ink);font-weight:600}
   border-bottom:1px dotted var(--hair-light);
 }
 .calendar-link-subtle:hover{color:var(--paper);}
-.obrigado-step2{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:rgba(206,117,80,.18);
-  border:1px solid var(--accent2-light);
-  color:var(--accent2-light);
-  padding:6px 14px;
-  font-size:.72rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  font-weight:600;
-  border-radius:20px;
-  margin:0 0 14px;
-}
-.obrigado-badge{opacity:.75}
+
 /* FAQ */
 .faq-box{padding:22px 0;border-bottom:1px solid var(--hair)}
 .faq-box:first-of-type{border-top:1px solid var(--ink)}
@@ -618,17 +590,13 @@ footer{padding:48px 20px;text-align:center;font-size:.65rem;letter-spacing:.25em
       </form>
       <!-- TELA DE OBRIGADO -->
       <div id="obrigado" role="status" aria-live="polite">
-        <div class="obrigado-badge">
-          <span>✓</span> Passo 1 · inscrição registrada
-        </div>
-        <div class="obrigado-step2">Passo 2 · falta isso</div>
-        <h3 class="obrigado-title">Entre no grupo para receber o link</h3>
-        <p class="obrigado-sub"><strong style="color:var(--paper);">O link de acesso ao Zoom é enviado no grupo do WhatsApp</strong>, junto com os lembretes do encontro. Sem entrar no grupo, você fica sem o link da sala.</p>
+        <h3 class="obrigado-title">Falta isso: <span style="color:var(--accent2-light);">entrar no grupo</span> para receber o link</h3>
         <!-- BOTÃO DO WHATSAPP DESTACADO -->
         <a href="https://chat.whatsapp.com/K9nEDm9vln67LsuQRZqpn6" target="_blank" rel="noopener" class="btn-whatsapp-destaque">
           <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.04 20.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.13 8.13 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
           <span>Entrar no grupo e receber o link ↗</span>
         </a>
+        <p class="obrigado-sub"><strong style="color:var(--paper);">Inscrição registrada.</strong> O link de acesso ao Zoom é enviado no grupo do WhatsApp, junto com os lembretes do encontro. Sem entrar no grupo, você fica sem o link da sala.</p>
         <span class="btn-whatsapp-aviso">Grupo silencioso. Apenas a Thays e a equipe enviam links e lembretes da sala.</span>
         <!-- LINK DO CALENDÁRIO -->
         <div>
