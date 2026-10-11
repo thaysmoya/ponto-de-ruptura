@@ -13,10 +13,10 @@ TZNAME:-03
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:ponto-de-ruptura-23set2026@thaysmoya.github.io
-DTSTAMP:20260829T120000Z
-DTSTART;TZID=America/Sao_Paulo:20260923T200000
-DTEND;TZID=America/Sao_Paulo:20260923T213000
+UID:ponto-de-ruptura-27out2026@thaysmoya.github.io
+DTSTAMP:20261011T153700Z
+DTSTART;TZID=America/Sao_Paulo:20261027T200000
+DTEND;TZID=America/Sao_Paulo:20261027T213000
 SUMMARY:Ponto de Ruptura · encontro ao vivo com Thays Moya
 DESCRIPTION:Encontro prático de diagnóstico ao vivo para mulheres que dirig
  em negócios.\n\nO link de acesso ao Zoom chega no seu WhatsApp.\n\nNão fic
